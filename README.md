@@ -1,62 +1,41 @@
+# How to Turn On Ultimate Performance in Windows
 
----
+This guide shows you how to make your computer run faster using the Ultimate Performance power plan.
 
-# How to Enable Ultimate Performance Power Plan on Windows
+## What You Need
 
-This guide will walk you through the steps to enable the **Ultimate Performance** power plan on Windows without needing a specific licensing tier. This power plan optimizes your system's performance by minimizing power management overhead.
+- Works on Windows 10 Pro, Enterprise, and Education. You can also do it on Windows Home.
+- You need to be the **admin** (the boss) on your computer.
 
-## Table of Contents
-1. [Prerequisites](#prerequisites)
-2. [Steps to Enable Ultimate Performance](#steps-to-enable-ultimate-performance)
-3. [Verifying the Power Plan](#verifying-the-power-plan)
-4. [Additional Tips](#additional-tips)
+## Steps to Follow
 
----
+### 1. Open Command Prompt as Admin
+- Press `Win + X` or right-click the **Start** button.
+- Click on **Windows Terminal (Admin)** or **Command Prompt (Admin)**.
 
-## Prerequisites
+### 2. Type the Command
+- In the window that opens, type this:
+  ```
+  powercfg -duplicatescheme 4f976c1d-8b86-4e36-9a6e-1b9f4d150c59
+  ```
+- Press **Enter** on your keyboard. 
 
-- This method is suitable for Windows 10 Pro, Enterprise, and Education editions. However, it can also be enabled on Windows Home editions using the command line.
-- Ensure you have **administrator privileges** on your system.
+### 3. Close the Command Prompt
+- Once you see a message saying it worked, you can close the window.
 
----
+## Check If It’s On
 
-## Steps to Enable Ultimate Performance
+### 1. Open Power Options
+- Press `Win + R` to open the Run box.
+- Type `control panel` and hit **Enter**.
+- Go to **Hardware and Sound**, then **Power Options**.
 
-1. **Open Command Prompt as Administrator**:
-   - Press `Win + X` or right-click the Start button.
-   - Select **Windows Terminal (Admin)** or **Command Prompt (Admin)** from the menu.
+### 2. Look for Ultimate Performance
+- You should see **Ultimate Performance** listed there.
+- Click on it to turn it on.
 
-2. **Enter the Command**:
-   - In the command prompt window, type the following command and press **Enter**:
+## Extra Tips
 
-     ```bash
-     powercfg -duplicatescheme 4f976c1d-8b86-4e36-9a6e-1b9f4d150c59
-     ```
-
-   - This command creates a duplicate of the Ultimate Performance scheme.
-
-3. **Close the Command Prompt**:
-   - Once the command executes successfully, you can close the Command Prompt window.
-
----
-
-## Verifying the Power Plan
-
-1. **Open Power Options**:
-   - Press `Win + R` to open the Run dialog.
-   - Type `control panel` and press **Enter**.
-   - In the Control Panel, navigate to **Hardware and Sound** > **Power Options**.
-
-2. **Select the Ultimate Performance Plan**:
-   - In the Power Options window, you should see the **Ultimate Performance** plan listed.
-   - Select it to enable this power plan.
-
----
-
-## Additional Tips
-
-- **Reverting to Balanced**: If you want to switch back to the Balanced plan, simply select it from the Power Options menu.
-- **Impact on Energy Consumption**: Keep in mind that the Ultimate Performance plan may increase energy consumption, so it is recommended for desktop computers or high-performance laptops connected to power sources.
-- **Monitoring Performance**: You can use tools like **Task Manager** or **Resource Monitor** to monitor your system's performance while using this power plan.
-
----
+- **Switching Back:** If you want to go back to the Balanced plan, just select it from the Power Options.
+- **Energy Use:** The Ultimate Performance plan may use more power, so it’s best for desktops or powerful laptops plugged in.
+- **Check Performance:** Use Task Manager or Resource Monitor to see how your computer is doing.
